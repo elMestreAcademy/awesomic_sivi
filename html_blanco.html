@@ -1,55 +1,109 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Currículum</title>
+    <title>Mi página web</title>
+    <script>
+        const DEBUG = true;
+
+        const profile = {
+            "name": "nombre",
+            "surnames": "apellidos",
+            "title": "titulo trabajo",
+            "description": "descripción",
+            "avatar": {
+                "alt": "foto",
+                "link": "link kinkdin"
+            },
+            "birthday": "cumpleaños"
+        };
+
+        var sivi_generator = class {
+            constructor() {
+                this.profile = profile;
+                this.fillData();
+            }
+
+            fillData() {
+                console.log("Filling data:");
+                console.log(this.profile);
+                console.log("--------");
+
+                this.section = document.getElementsByTagName("profile")[0];
+                console.log(this.section);
+
+                var h5 = document.createElement("h5");
+                h5.innerHTML = this.profile.name + " " + this.profile.surnames;
+                this.section.appendChild(h5);
+
+                this.makeSection(this.profile);
+            }
+
+            makeImg(key, value) {
+                var elem = document.createElement("img");
+                elem.src = value;
+
+                this.section.appendChild(elem);
+            }
+
+            makeLink(key, value) {
+                var elem = document.createElement("a");
+                elem.href = value;
+                elem.innerHTML = value;
+
+                this.section.appendChild(elem);
+            }
+
+            makeElem(key, value) {
+                var container = document.createElement("p");
+                var elem = document.createElement(key);
+                elem.innerHTML = value;
+
+                container.appendChild(elem);
+                this.section.appendChild(container);
+            }
+
+            makeSection(data, level = 0, sectionName = null) {
+                for (const key in data) {
+                    if (data.hasOwnProperty(key)) {
+                        if (level > 0) {
+                            console.log(typeof (data[key]))
+                            console.log(`${data[key]}`)
+                        }
+
+                        var sectionType = typeof (data[key]);
+
+                        if (sectionType == 'string') {
+                            if (DEBUG) console.log(`sectionName: ${sectionName} -- key: ${key}`);
+
+                            if (sectionName == "avatar" && key == 'link') {
+                                this.makeImg(key, data[key]);
+                            } else if (key == 'link') {
+                                this.makeLink(key, data[key]);
+                            }
+                            else {
+                                this.makeElem(key, data[key]);
+                            }
+                        }
+                        else if (sectionType == 'object') {
+                            this.makeSection(data[key], level + 1, key);
+                        }
+                        else {
+                            console.error(`TYPE OF this.section NOT MANAGED ${sectionType}`)
+                        }
+                    }
+                }
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            new sivi_generator();
+        });
+    </script>
 </head>
 
 <body>
-    <header>
-        <h1>Mi Currículum</h1>
-    </header>
-
-    <section id="setting">
-        <h2>Configuración</h2>
-        <!-- Aquí puedes agregar detalles sobre la configuración -->
-    </section>
-
-    <section id="aboutme">
-        <h2>Sobre mí</h2>
-        <div id="profile">
-            <h3>Perfil</h3>
-            <!-- Aquí puedes agregar una descripción breve de ti mismo -->
-        </div>
-
-        <div id="relevantYearsOfExperience">
-            <h3>Años de experiencia relevantes</h3>
-            <!-- Aquí puedes agregar detalles sobre tu experiencia laboral relevante -->
-        </div>
-
-        <div id="relevantLink">
-            <h3>Enlace relevante</h3>
-            <!-- Aquí puedes agregar un enlace a tu perfil en línea, como LinkedIn o tu sitio web personal -->
-        </div>
-
-        <div id="significativeRelationShips">
-            <h3>Relaciones significativas</h3>
-            <!-- Aquí puedes agregar información sobre relaciones profesionales relevantes -->
-        </div>
-
-        <div id="interestingFacts">
-            <h3>Datos interesantes</h3>
-            <!-- Aquí puedes agregar datos interesantes o destacados sobre ti mismo -->
-        </div>
-
-        <div id="recommendations">
-            <h3>Recomendaciones</h3>
-            <!-- Aquí puedes agregar recomendaciones profesionales o testimonios -->
-        </div>
-    </section>
-
+    <profile></profile>
 </body>
 
 </html>
