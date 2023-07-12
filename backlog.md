@@ -1,58 +1,59 @@
 # Awesomic Sivi
 
-## SIN ASIGNAR:
-
-- agusspoxe
-- johanZrEND
-- josedavidd
-- mmposts
-
 ## Backlog
 
 0. Crear Lista de tareas - [mariagomezt]
 
-   - Crear Backlog
-   - Estimar tiempos
-   - Definir
+  - Crear Backlog
+  - Estimar tiempos
+  - Definir
 
 creame un diagrama de gantt en mermaid con la siguiente lista de tareas. la fecha de inicio es el 12-jul de 2023, la de fin el 20-jul-2023 a las 12:00. El horario de trabjo es de 9:00 a 14:00. El 13-jul y el 20 jul ademas se necesitan 2 horas para tareas administrativas
 
-
 1. Configuración inicial del proyecto
-   - Crear y configurar el repositorio en GitHub.
-   - Elegir y configurar el marco de trabajo para el desarrollo del sitio (por ejemplo, React, Angular, Vue.js).
-   - Configurar el entorno de desarrollo local (instalar las dependencias necesarias).
+  - A - Crear y configurar el repositorio en GitHub. [elMestre]
+  - B - Guion y diagrama casos de uso - [mmposts]
+  - C - Elegir y configurar el marco de trabajo para el desarrollo del sitio (por ejemplo, React, Angular, Vue.js).
+  - Configurar el entorno de desarrollo local (instalar las dependencias necesarias).
 
-2. Crear una estructura de página web básica - [nagelit]
+2. Crear una estructura de página web básica
+  - logica [nagelit],[amoyanoglz]
+  - Semantica - HTML [agusspoxe] [johanZrEND] [josedavidd]
+  - Diseño [paolafdezz],[saraArbesu]
+  - Crear una estructura de página web básica con cabecera, cuerpo y pie de página.
 
-   - Crear una estructura de página web básica con cabecera, cuerpo y pie de página.
-
-3. Crear componentes de CV
-   - Crear componentes para cada sección del CV (por ejemplo, experiencia laboral, educación, habilidades).
+3. Crear componentes de CV [paolafdezz],[saraArbesu],[amoyanoglz]
+  - Crear componentes para cada sección del CV (por ejemplo, experiencia laboral, educación, habilidades).
+    - aboutMe
+    - experience
+      - jobs
+      - publicArtifacts
+    - knowledge
+    - careerPreferences
 
 4. Implementar la lógica para parsear JSON
-   - Leer y parsear el JSON proporcionado. - [javiercjv]
-   - Enlazar los datos del JSON con los componentes del CV.
+  - Leer y parsear el JSON proporcionado. - [javiercjv]
+  - Enlazar los datos del JSON con los componentes del CV.
 
 5. Estilizar la página web
-   - Aplicar estilos básicos a la página web. - [paolafdezz, saraArbesu]
-   - Asegurarse de que la página sea responsiva y se vea bien en diferentes tamaños de pantalla.
+  - Aplicar estilos básicos a la página web. - 
+  - Asegurarse de que la página sea responsiva y se vea bien en diferentes tamaños de pantalla.
 
 6. Pruebas
-   - Probar la funcionalidad de la página web en varios navegadores.
-   - Probar la responsividad en varios dispositivos.
+  - Probar la funcionalidad de la página web en varios navegadores.
+  - Probar la responsividad en varios dispositivos.
 
 7. Despliegue
-   - Configurar GitHub Pages para desplegar la página web. - [manal127]
-   - Probar la página web en el entorno de producción y resolver cualquier problema que pueda surgir.
+  - Configurar GitHub Pages para desplegar la página web. - [manal127]
+  - Probar la página web en el entorno de producción y resolver cualquier problema que pueda surgir.
 
 8. SEO y accesibilidad
-   - Mejorar la accesibilidad de la página web (A11Y).
-   - Optimizar la página web para SEO.
+  - Mejorar la accesibilidad de la página web (A11Y).
+  - Optimizar la página web para SEO.
 
 9. PDF
-   - Generar
-   - Descargar
+  - Generar
+  - Descargar
 
 ## Planning
 
@@ -116,7 +117,7 @@ graph TB
     J[Probar la funcionalidad de la página web]
     K[Probar la responsividad en varios dispositivos]
     L[Configurar GitHub Pages para desplegar la página web]
-    M[Probar la página web en el entorno de producción]
+
     N[Mejorar la accesibilidad de la página web - A11Y]
     O[Optimizar la página web para SEO]
     P[Generar PDF]
@@ -130,14 +131,14 @@ graph TB
     E-->F
     F-->G
     G-->H
+    G-->J
     H-->I
-    I-->J
-    J-->K
+    I-->K
+    J-->L
     K-->L
-    L-->M
-    M-->N
-    N-->O
-    O-->P
+    L-->N
+    L-->O
+    L-->P
     P-->Q
 
 ```
