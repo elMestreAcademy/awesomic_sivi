@@ -1,7 +1,4 @@
-# Awesome Sivi
-
-# Tiempo restante:
-   6 jornadas
+# Awesomic Sivi
 
 ## SIN ASIGNAR:
 
@@ -18,6 +15,9 @@
    - Estimar tiempos
    - Definir
 
+creame un diagrama de gantt en mermaid con la siguiente lista de tareas. la fecha de inicio es el 12-jul de 2023, la de fin el 20-jul-2023 a las 12:00. El horario de trabjo es de 9:00 a 14:00. El 13-jul y el 20 jul ademas se necesitan 2 horas para tareas administrativas
+
+
 1. Configuración inicial del proyecto
    - Crear y configurar el repositorio en GitHub.
    - Elegir y configurar el marco de trabajo para el desarrollo del sitio (por ejemplo, React, Angular, Vue.js).
@@ -29,7 +29,7 @@
 
 3. Crear componentes de CV
    - Crear componentes para cada sección del CV (por ejemplo, experiencia laboral, educación, habilidades).
-   
+
 4. Implementar la lógica para parsear JSON
    - Leer y parsear el JSON proporcionado. - [javiercjv]
    - Enlazar los datos del JSON con los componentes del CV.
@@ -37,7 +37,7 @@
 5. Estilizar la página web
    - Aplicar estilos básicos a la página web. - [paolafdezz, saraArbesu]
    - Asegurarse de que la página sea responsiva y se vea bien en diferentes tamaños de pantalla.
-   
+
 6. Pruebas
    - Probar la funcionalidad de la página web en varios navegadores.
    - Probar la responsividad en varios dispositivos.
@@ -53,3 +53,91 @@
 9. PDF
    - Generar
    - Descargar
+
+## Planning
+
+### GANTT
+
+```mermaid
+gantt
+    dateFormat  YYYY-MM-DD
+    title Diagrama de Gantt del Proyecto
+
+    section Configuración inicial del proyecto
+    Crear y configurar el repositorio en GitHub :a1, 2023-07-12, 1d
+    Elegir y configurar el marco de trabajo :after a1, 1d
+    Configurar el entorno de desarrollo local :after a1, 1d
+
+    section Crear una estructura de página web básica
+    Crear una estructura de página web básica :b1, 2023-07-15, 1d
+
+    section Crear componentes de CV
+    Crear componentes para cada sección del CV :c1, 2023-07-16, 1d
+
+    section Implementar la lógica para parsear JSON
+    Leer y parsear el JSON proporcionado :d1, 2023-07-17, 1d
+    Enlazar los datos del JSON con los componentes del CV :after d1, 1d
+
+    section Estilizar la página web
+    Aplicar estilos básicos a la página web :e1, 2023-07-18, 1d
+    Asegurarse de que la página sea responsiva :after e1, 1d
+
+    section Pruebas
+    Probar la funcionalidad de la página web :f1, 2023-07-19, 1d
+    Probar la responsividad en varios dispositivos :after f1, 1d
+
+    section Despliegue
+    Configurar GitHub Pages para desplegar la página web :g1, 2023-07-19, 1d
+    Probar la página web en el entorno de producción :after g1, 1d
+
+    section SEO y accesibilidad
+    Mejorar la accesibilidad de la página web (A11Y) :h1, 2023-07-20, 1d
+    Optimizar la página web para SEO :after h1, 1d
+
+    section PDF
+    Generar :i1, 2023-07-20, 1d
+    Descargar :after i1, 1d
+
+```
+
+### PERT
+
+```mermaid
+graph TB
+    A[Crear y configurar el repositorio en GitHub]
+    B[Elegir y configurar el marco de trabajo]
+    C[Configurar el entorno de desarrollo local]
+    D[Crear una estructura de página web básica]
+    E[Crear componentes de CV]
+    F[Leer y parsear el JSON proporcionado]
+    G[Enlazar los datos del JSON con los componentes del CV]
+    H[Aplicar estilos básicos a la página web]
+    I[Asegurarse de que la página sea responsiva]
+    J[Probar la funcionalidad de la página web]
+    K[Probar la responsividad en varios dispositivos]
+    L[Configurar GitHub Pages para desplegar la página web]
+    M[Probar la página web en el entorno de producción]
+    N[Mejorar la accesibilidad de la página web - A11Y]
+    O[Optimizar la página web para SEO]
+    P[Generar PDF]
+    Q[Descargar PDF]
+    A-->B
+    B-->C
+    B-->D
+    B-->E
+    C-->F
+    D-->F
+    E-->F
+    F-->G
+    G-->H
+    H-->I
+    I-->J
+    J-->K
+    K-->L
+    L-->M
+    M-->N
+    N-->O
+    O-->P
+    P-->Q
+
+```
