@@ -67,13 +67,11 @@ gantt
     section Configuración inicial del proyecto
     Crear y configurar el repositorio en GitHub :a1, 2023-07-12, 1d
     Elegir y configurar el marco de trabajo :after a1, 1d
-    Configurar el entorno de desarrollo local :after a1, 1d
-
+    Configurar el entorno de desarrollo local :after a1, 4d
     section Crear una estructura de página web básica
-    Crear una estructura de página web básica :b1, 2023-07-15, 1d
-
+    Crear una estructura de página web básica :after a1, 4d
     section Crear componentes de CV
-    Crear componentes para cada sección del CV :c1, 2023-07-16, 1d
+    Crear componentes para cada sección del CV :after a1, 4d
 
     section Implementar la lógica para parsear JSON
     Leer y parsear el JSON proporcionado :d1, 2023-07-17, 1d
