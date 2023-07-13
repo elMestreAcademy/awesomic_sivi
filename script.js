@@ -67,7 +67,8 @@ var sivi_generator = class {
     }
 
     makeElem(key, value) {
-        var container = document.createElement("p");
+        var container = document.createElement("div");
+        container.className = key;
         var elem = document.createElement(key);
         elem.innerHTML = value;
 
@@ -90,9 +91,9 @@ var sivi_generator = class {
 
                     if (DEBUG) console.log(`sectionName: ${sectionName} -- key: ${key}`);
 
-                    if (sectionName == "avatar" && key == 'link') {
+                    if (key == 'link') {
                         this.makeImg(key, data[key]);
-                    } else if (key == 'link') {
+                    } else if (key == 'URL') {
                         this.makeLink(key, data[key]);
                     }
                     else {
