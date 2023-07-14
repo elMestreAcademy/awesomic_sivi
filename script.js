@@ -1,5 +1,11 @@
 const DEBUG = false;
 
+function isInt(value) {
+    return !isNaN(value) &&
+        parseInt(Number(value)) == value &&
+        !isNaN(parseInt(value, 10));
+}
+
 var sivi_generator = class {
     constructor(sivi_data) {
         this.sivi_data = sivi_data;
@@ -31,6 +37,22 @@ var sivi_generator = class {
         this.section.appendChild(elem);
     }
 
+    makeBoolean(key, value) {
+        var elem = document.createElement("div");
+        elem.class = 'boolean'
+        elem.innerHTML = value ? 'Si' : 'No';
+
+        this.section.appendChild(elem);
+    }
+
+    makeNumber(key, value) {
+        var elem = document.createElement("div");
+        elem.class = 'number'
+        elem.innerHTML = value;
+
+        this.section.appendChild(elem);
+    }
+
     makeElem(key, value) {
         var container = document.createElement("div");
         container.className = key;
@@ -56,6 +78,7 @@ var sivi_generator = class {
 
                 var section = document.createElement("div");
                 section.id = key;
+                section.innerHTML = `${key}: `
                 this.section.appendChild(section);
 
                 if (level == 0) {
@@ -63,6 +86,10 @@ var sivi_generator = class {
                 }
 
                 var sectionType = typeof (data[key]);
+
+                if (isInt(key)) {
+                    sectionType = 'listElement';
+                }
 
                 switch (sectionType) {
                     case 'string':
@@ -75,14 +102,23 @@ var sivi_generator = class {
 
                         break;
 
+                    case 'number':
+                        /* TODO: javiercv*/
+
+                        this.makeNumber(key, data[key])
+                        break;
+
                     case 'object':
                         this.makeSection(data[key], level + 1, key);
                         break;
 
-                    case 'number':
-                        /* TODO: javiercv*/
-                        console.error(`TYPE OF this.section NOT MANAGED yet ${sectionType}`)
+                    case 'boolean':
+                        this.makeBoolean(key, data[key]);
+                        break;
 
+                    case 'listElement':
+                        /* TODO: */
+                        console.info("TODO: ENTERO DETEKTAUUUUU");
                         break;
 
                     default:
