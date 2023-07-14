@@ -13,15 +13,6 @@ var sivi_generator = class {
             console.log("--------");
         }
 
-        this.section = document.getElementById("main_wrapper");
-        if (DEBUG) {
-            console.log(this.section);
-        }
-
-        var h5 = document.createElement("h5");
-        h5.innerHTML = this.sivi_data.name + " " + this.sivi_data.surnames;
-        this.section.appendChild(h5);
-
         this.makeSection(this.sivi_data);
     }
 
@@ -53,32 +44,51 @@ var sivi_generator = class {
     makeSection(data, level = 0, sectionName = null) {
 
         for (const key in data) {
+            if (level == 0) {
+                this.section = document.getElementById("main_wrapper");
+            }
+
             if (data.hasOwnProperty(key)) {
                 if (DEBUG && level > 0) {
                     console.log(typeof (data[key]))
                     console.log(`${data[key]}`)
                 }
 
+                var section = document.createElement("div");
+                section.id = key;
+                this.section.appendChild(section);
+
+                if (level == 0) {
+                    this.section = document.getElementById(key);
+                }
+
                 var sectionType = typeof (data[key]);
 
-                if (sectionType == 'string') {
+                switch (sectionType) {
+                    case 'string':
+                        if (key == 'link')
+                            this.makeImg(key, data[key]);
+                        else if (key == 'URL')
+                            this.makeLink(key, data[key]);
+                        else
+                            this.makeElem(key, data[key]);
 
-                    if (DEBUG) console.log(`sectionName: ${sectionName} -- key: ${key}`);
+                        break;
 
-                    if (key == 'link') {
-                        this.makeImg(key, data[key]);
-                    } else if (key == 'URL') {
-                        this.makeLink(key, data[key]);
-                    }
-                    else {
-                        this.makeElem(key, data[key]);
-                    }
-                }
-                else if (sectionType == 'object') {
-                    this.makeSection(data[key], level + 1, key);
-                }
-                else {
-                    console.error(`TYPE OF this.section NOT MANAGED ${sectionType}`)
+                    case 'object':
+                        this.makeSection(data[key], level + 1, key);
+                        break;
+
+                    case 'number':
+                        /* TODO: javiercv*/
+                        console.error(`TYPE OF this.section NOT MANAGED yet ${sectionType}`)
+
+                        break;
+
+                    default:
+                        console.error(`TYPE OF this.section NOT MANAGED ${sectionType}`)
+
+                        break;
                 }
             }
         }
