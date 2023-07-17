@@ -1,0 +1,20 @@
+.left {
+    background-color: red;
+}
+
+.center {
+    border: solid 4px green;
+}
+
+.azul {
+    color: blue;
+}
+
+#nombre-apellidos {
+    float: right;
+    padding: 4rem;
+}
+
+.hidden {
+    display: none;
+}
