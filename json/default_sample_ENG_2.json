@@ -1,0 +1,64 @@
+{
+  "nombre": "Steve Jobs",
+  "titulo": "Co-fundador de Apple Inc.",
+  "educacion": [
+    {
+      "institucion": "Reed College",
+      "titulo": "Estudios sin graduarse"
+    }
+  ],
+  "experiencia": [
+    {
+      "titulo": "Co-fundador y Presidente Ejecutivo",
+      "empresa": "Apple Inc.",
+      "fecha_inicio": "1976",
+      "fecha_fin": "1985"
+    },
+    {
+      "titulo": "Fundador y Presidente Ejecutivo",
+      "empresa": "NeXT Inc.",
+      "fecha_inicio": "1985",
+      "fecha_fin": "1997"
+    },
+    {
+      "titulo": "Co-fundador y Presidente Ejecutivo",
+      "empresa": "Pixar Animation Studios",
+      "fecha_inicio": "1986",
+      "fecha_fin": "2006"
+    },
+    {
+      "titulo": "Director Ejecutivo",
+      "empresa": "Apple Inc.",
+      "fecha_inicio": "1997",
+      "fecha_fin": "2011"
+    }
+  ],
+  "logros": [
+    "Lanzamiento exitoso de productos emblemáticos como el Macintosh, iPhone, iPad y iPod",
+    "Revitalización de Apple después de su retorno en 1997",
+    "Liderazgo en la creación de películas de animación innovadoras con Pixar",
+    "Transformación de la industria de la música con el lanzamiento del iTunes Store",
+    "Creación del concepto de tiendas de venta al por menor de Apple (Apple Stores)"
+  ],
+  "premios": [
+    {
+      "nombre": "Medalla Nacional de Tecnología",
+      "año": 1985,
+      "otorgado_por": "Presidente Ronald Reagan",
+      "descripcion": "Por su visión y liderazgo en el desarrollo de la computadora personal"
+    },
+    {
+      "nombre": "Premio Grammy al Logro Técnico",
+      "año": 2002,
+      "otorgado_por": "Academia Nacional de Artes y Ciencias de la Grabación",
+      "descripcion": "Por su contribución en la mejora de la calidad de las grabaciones de música"
+    }
+  ],
+  "publicaciones": [
+    {
+      "titulo": "iWoz: Computer Geek to Cult Icon",
+      "fecha_publicacion": "2006",
+      "descripcion": "Autobiografía de Steve Wozniak, co-fundador de Apple Inc."
+    }
+  ]
+}
