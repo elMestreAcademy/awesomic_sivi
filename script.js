@@ -41,6 +41,24 @@ var sivi_generator = class {
         this.section.appendChild(container);
     }
 
+    makeNumber(key, value) {
+        var elem = document.createElement("div");
+        elem.innerHTML = value;
+        this.section.appendChild(elem);
+    }
+
+    makeBool(key, value) {
+        var container = document.createElement("div");
+        var label = document.createElement("label");
+        label.innerHTML = key;
+        var elem = document.createElement("input");
+        elem.type = "checkbox";
+        elem.checked = value;
+        container.appendChild(label);
+        container.appendChild(elem);
+        this.section.appendChild(container);
+    }
+
     makeSection(data, level = 0, sectionName = null) {
 
         for (const key in data) {
@@ -87,9 +105,11 @@ var sivi_generator = class {
                         break;
 
                     case 'number':
-                        /* TODO: javiercv*/
-                        console.error(`TYPE OF this.section NOT MANAGED yet ${sectionType}`)
+                        this.makeNumber(key, data[key]);
+                        break;
 
+                    case 'boolean':
+                        this.makeBool(key, data[key]);
                         break;
 
                     default:
