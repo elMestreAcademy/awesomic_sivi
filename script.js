@@ -4,7 +4,10 @@ const DEBUG = false;
 var sivi_generator = class {
     constructor(sivi_data) {
         this.sivi_data = sivi_data;
-        this.fillData()
+        this.fillData();
+        this.section = document.getElementById("main_wrapper");
+
+
     }
 
     fillData() {

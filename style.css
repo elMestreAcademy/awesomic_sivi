@@ -13,13 +13,13 @@ body div {
 }
 
 #settings {
-    background-color: red;
+    background-color: coral;
     font-size: 40px;
     /*display: none;*/
 }
 
 #aboutMe {
-    background-color: blueviolet;
+    background-color: palevioletred;
 }
 
 h1 {
