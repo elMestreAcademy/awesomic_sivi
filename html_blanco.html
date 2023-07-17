@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mi página web</title>
+    <script>
+        const DEBUG = true;
+
+        const profile = {
+            "name": "nombre",
+            "surnames": "apellidos",
+            "title": "titulo trabajo",
+            "description": "descripción",
+            "avatar": {
+                "alt": "foto",
+                "link": "link kinkdin"
+            },
+            "birthday": "cumpleaños"
+        };
+
+        var sivi_generator = class {
+            constructor() {
+                this.profile = profile;
+                this.fillData();
+            }
+
+            fillData() {
+                console.log("Filling data:");
+                console.log(this.profile);
+                console.log("--------");
+
+                this.section = document.getElementsByTagName("profile")[0];
+                console.log(this.section);
+
+                var h5 = document.createElement("h5");
+                h5.innerHTML = this.profile.name + " " + this.profile.surnames;
+                this.section.appendChild(h5);
+
+                this.makeSection(this.profile);
+            }
+
+            makeImg(key, value) {
+                var elem = document.createElement("img");
+                elem.src = value;
+
+                this.section.appendChild(elem);
+            }
+
+            makeLink(key, value) {
+                var elem = document.createElement("a");
+                elem.href = value;
+                elem.innerHTML = value;
+
+                this.section.appendChild(elem);
+            }
+
+            makeElem(key, value) {
+                var container = document.createElement("p");
+                var elem = document.createElement(key);
+                elem.innerHTML = value;
+
+                container.appendChild(elem);
+                this.section.appendChild(container);
+            }
+
+            makeSection(data, level = 0, sectionName = null) {
+                for (const key in data) {
+                    if (data.hasOwnProperty(key)) {
+                        if (level > 0) {
+                            console.log(typeof (data[key]))
+                            console.log(`${data[key]}`)
+                        }
+
+                        var sectionType = typeof (data[key]);
+
+                        if (sectionType == 'string') {
+                            if (DEBUG) console.log(`sectionName: ${sectionName} -- key: ${key}`);
+
+                            if (sectionName == "avatar" && key == 'link') {
+                                this.makeImg(key, data[key]);
+                            } else if (key == 'link') {
+                                this.makeLink(key, data[key]);
+                            }
+                            else {
+                                this.makeElem(key, data[key]);
+                            }
+                        }
+                        else if (sectionType == 'object') {
+                            this.makeSection(data[key], level + 1, key);
+                        }
+                        else {
+                            console.error(`TYPE OF this.section NOT MANAGED ${sectionType}`)
+                        }
+                    }
+                }
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            new sivi_generator();
+        });
+    </script>
+</head>
+
+<body>
+    <profile></profile>
+</body>
+
+</html>
