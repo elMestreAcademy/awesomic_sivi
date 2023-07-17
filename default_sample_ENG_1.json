@@ -1,0 +1,68 @@
+{
+  "nombre": "Barack Obama",
+  "titulo": "44.º Presidente de los Estados Unidos",
+  "educacion": [
+    {
+      "institucion": "Universidad de Columbia",
+      "titulo": "Licenciatura en Ciencias Políticas",
+      "fecha_inicio": "1981",
+      "fecha_fin": "1983"
+    },
+    {
+      "institucion": "Facultad de Derecho de Harvard",
+      "titulo": "Juris Doctor",
+      "fecha_inicio": "1988",
+      "fecha_fin": "1991"
+    }
+  ],
+  "experiencia": [
+    {
+      "titulo": "Director de Proyecto",
+      "empresa": "Desarrollo de Negocios Comunitarios",
+      "fecha_inicio": "Junio 1985",
+      "fecha_fin": "Mayo 1988"
+    },
+    {
+      "titulo": "Profesor de Derecho Constitucional",
+      "empresa": "Universidad de Chicago",
+      "fecha_inicio": "Agosto 1992",
+      "fecha_fin": "Diciembre 2004"
+    },
+    {
+      "titulo": "Senador de los Estados Unidos",
+      "empresa": "Estado de Illinois",
+      "fecha_inicio": "Enero 2005",
+      "fecha_fin": "Noviembre 2008"
+    },
+    {
+      "titulo": "44.º Presidente de los Estados Unidos",
+      "empresa": "Casa Blanca",
+      "fecha_inicio": "Enero 2009",
+      "fecha_fin": "Enero 2017"
+    }
+  ],
+  "premios": [
+    {
+      "nombre": "Premio Nobel de la Paz",
+      "fecha": "2009",
+      "descripcion": "Otorgado por sus esfuerzos diplomáticos y cooperación internacional."
+    },
+    {
+      "nombre": "Perfil de Coraje",
+      "fecha": "1996",
+      "descripcion": "Reconocimiento por su liderazgo en el Senado de los Estados Unidos."
+    }
+  ],
+  "publicaciones": [
+    {
+      "titulo": "Dreams from My Father",
+      "fecha_publicacion": "1995",
+      "descripcion": "Memorias autobiográficas del autor."
+    },
+    {
+      "titulo": "The Audacity of Hope",
+      "fecha_publicacion": "2006",
+      "descripcion": "Ensayo político que aborda temas de política y democracia."
+    }
+  ]
+}
