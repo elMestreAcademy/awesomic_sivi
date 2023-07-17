@@ -97,6 +97,6 @@ function getData(url, callback_class) {
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    const url = "./default_sample_ES.json";
+    const url = "./json/default_sample_ES.json";
     getData(url, SiviGenerator);
 });
