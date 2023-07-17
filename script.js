@@ -1,121 +1,102 @@
-
 const DEBUG = false;
 
-var sivi_generator = class {
+class SiviGenerator {
     constructor(sivi_data) {
         this.sivi_data = sivi_data;
-        this.fillData()
+        this.resetSection();
+        this.fillData();
+    }
+
+    resetSection() {
+        this.section = document.getElementById("main_wrapper");
+    }
+
+    debugLog(...args) {
+        if (DEBUG) {
+            console.log(...args);
+        }
     }
 
     fillData() {
-        if (DEBUG) {
-            console.log("Filling data:");
-            console.log(this.sivi_data);
-            console.log("--------");
-        }
-
+        this.debugLog("Filling data:", this.sivi_data, "--------");
         this.makeSection(this.sivi_data);
     }
 
-    makeImg(key, value) {
-        var elem = document.createElement("img");
-        elem.src = value;
-
-        this.section.appendChild(elem);
-    }
-
-    makeLink(key, value) {
-        var elem = document.createElement("a");
-        elem.href = value;
-        elem.innerHTML = value;
-
-        this.section.appendChild(elem);
+    createAndAppendElement(type, attrs = {}, innerHTML = '', parent = this.section) {
+        let elem = document.createElement(type);
+        Object.assign(elem, attrs);
+        elem.innerHTML = innerHTML;
+        parent.appendChild(elem);
+        return elem;
     }
 
     makeElem(key, value) {
-        var container = document.createElement("div");
-        container.className = key;
-        var elem = document.createElement(key);
-        elem.innerHTML = value;
-
-        container.appendChild(elem)
-        this.section.appendChild(container);
+        let container = this.createAndAppendElement("div", { className: key });
+        this.createAndAppendElement(key, {}, value, container);
     }
 
-    makeSection(data, level = 0, sectionName = null) {
+    makeImg(key, value) {
+        this.createAndAppendElement("img", { src: value });
+    }
 
+    makeLink(key, value) {
+        this.createAndAppendElement("a", { href: value }, value);
+    }
+
+    makeNumber(key, value) {
+        this.createAndAppendElement("div", {}, value);
+    }
+
+    makeBool(key, value) {
+        let container = this.createAndAppendElement("div");
+        let label = this.createAndAppendElement("label", {}, key, container);
+        this.createAndAppendElement("input", { type: "checkbox", checked: value }, '', container);
+    }
+
+    processSection(key, data, level = 0) {
+        parent = this.createAndAppendElement("div", { id: key });
+
+        switch (typeof (data[key])) {
+            case 'string':
+                if (key === 'link') this.makeImg(key, data[key]);
+                else if (key === 'URL') this.makeLink(key, data[key]);
+                else this.makeElem('h' + level, data[key]);
+                break;
+            case 'object':
+                this.makeSection(data[key], level + 1);
+                break;
+            case 'number':
+                this.makeNumber(key, data[key]);
+                break;
+            case 'boolean':
+                this.makeBool(key, data[key]);
+                break;
+            default:
+                console.error(`TYPE NOT MANAGED ${typeof (data[key])}`);
+        }
+    }
+
+    makeSection(data, level = 0) {
         for (const key in data) {
-            if (level == 0) {
-                this.section = document.getElementById("main_wrapper");
-            }
-
             if (data.hasOwnProperty(key)) {
-                if (DEBUG && level > 0) {
-                    console.log(typeof (data[key]))
-                    console.log(`${data[key]}`)
+                if (level === 0) {
+                    this.resetSection();
                 }
-
-                var section = document.createElement("div");
-                section.id = key;
-                this.section.appendChild(section);
-
-                if (level == 0) {
-                    this.section = document.getElementById(key);
-                }
-
-                var sectionType = typeof (data[key]);
-
-                switch (sectionType) {
-                    case 'string':
-                        if (key == 'link')
-                            this.makeImg(key, data[key]);
-                        else if (key == 'URL')
-                            this.makeLink(key, data[key]);
-                        else {
-                            var regex = /\b\d+\b/;
-                            if (regex.test(key)) {
-                                console.log(`h${level}`);
-                                this.makeElem('h' + level, data[key]);
-                            }
-                            else
-                                this.makeElem(key, data[key]);
-                        }
-
-                        break;
-
-                    case 'object':
-                        this.makeSection(data[key], level + 1, key);
-                        break;
-
-                    case 'number':
-                        /* TODO: javiercv*/
-                        console.error(`TYPE OF this.section NOT MANAGED yet ${sectionType}`)
-
-                        break;
-
-                    default:
-                        console.error(`TYPE OF this.section NOT MANAGED ${sectionType}`)
-
-                        break;
-                }
+                this.debugLog(typeof (data[key]), data[key]);
+                this.processSection(key, data, level);
             }
         }
     }
 }
 
 function getData(url, callback_class) {
-
-    var req = new XMLHttpRequest();
-    req.responseType = 'json';
-    req.open('GET', url, true);
-    req.onload = function () {
-        var jsonResponse = req.response;
-        new callback_class(jsonResponse);
-    };
-    req.send(null);
+    fetch(url)
+        .then(response => response.json())
+        .then(data => new callback_class(data))
+        .catch(error => console.error('Error:', error));
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    var url = "./default_sample_ES.json"
-    getData(url, sivi_generator)
+    const url = "./default_sample_ES.json";
+    getData(url, SiviGenerator);
 });
