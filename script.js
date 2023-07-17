@@ -70,8 +70,15 @@ var sivi_generator = class {
                             this.makeImg(key, data[key]);
                         else if (key == 'URL')
                             this.makeLink(key, data[key]);
-                        else
-                            this.makeElem(key, data[key]);
+                        else {
+                            var regex = /\b\d+\b/;
+                            if (regex.test(key)) {
+                                console.log(`h${level}`);
+                                this.makeElem('h' + level, data[key]);
+                            }
+                            else
+                                this.makeElem(key, data[key]);
+                        }
 
                         break;
 
