@@ -18,7 +18,7 @@ creame un diagrama de gantt en mermaid con la siguiente lista de tareas. la fech
         - √ Vainilla CSS [paolafdezz],[saraArbesu]
     - Configurar el entorno de desarrollo local (instalar las dependencias necesarias).
     - Documento de diseño
-        - Guion y diagrama casos de uso - [mmposts] [domingo 16]
+        - Guion y diagrama casos de uso - [mmposts]
         - Gant [mariagomezt]
         - Pert [mariagomezt]
         - Requisitos [nagelit]
@@ -52,6 +52,7 @@ creame un diagrama de gantt en mermaid con la siguiente lista de tareas. la fech
 
 8. Despliegue
     - Configurar GitHub Pages para desplegar la página web. - [manal127]
+    - Documentacion para crear un GitHub- [manal127]
     - Probar la página web en el entorno de producción y resolver cualquier problema que pueda surgir.
 
 9. SEO y accesibilidad
@@ -73,7 +74,7 @@ gantt
 
         section Configuración inicial
         Crear repositorio :a1, 2023-07-12, 1d
-        marco de trabajo :after a1, 1d
+        marco de trabajo :a1, 2023-07-12, 1d
         Configurar entorno:after a1, 5d
 
         section Crear estructura
@@ -81,16 +82,12 @@ gantt
 
         section Crear componentes
         Crear componentes :after a1, 5d
-        aboutMe : after a2, 4d
-        experience : after a2, 4d
-        knowledge : after a2, 4d
-        careerPreferences : after a2, 4d
-        Parsear JSON :after a1, 1d
-        HTML desde JSON :after a2, 4d
+        Parsear JSON :a1, 2023-07-12, 1d
+        HTML desde JSON :after a1, 5d
 
         section Estilo CSS
         Colores desarollo :e1, 2023-07-17, 1d
-        Maquetación :e1, 2023-07-17, 1d
+        Maquetación :e1, 2023-07-17, 2d
         Responsive :after e1, 1d
         Colores finales :after e1, 1d
 
@@ -139,12 +136,11 @@ graph TB
         Q[Descargar PDF]
         A-->B
         B-->C
-        B-->D
-        B-->E
         C-->F
-        D-->F
-        E-->F
-        F-->G
+        F-->D
+        F-->E
+        D-->G
+        E-->G
         G-->H
         G-->J
         H-->I
