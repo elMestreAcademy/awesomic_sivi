@@ -1,15 +1,39 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: bisque;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
 }
 
 body div {
     margin: 0.6rem;
 }
 
+#settings {
+    display: none;
+}
+
+#aboutMe {
+    background-color: rgb(255, 121, 244);
+}
+
+#experience {
+    background-color: orange;
+}
+
+#knowledge {
+    background-color: rgb(13, 226, 13);
+}
+
+#careerPreferences {
+    background-color: yellow;
+}
+
 #main_wrapper {
-    background-color: darkkhaki;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 #settings {
@@ -18,9 +42,25 @@ body div {
     /*display: none;*/
 }
 
-#aboutMe {
-    background-color: palevioletred;
+.section-style {
+    margin-bottom: 20px;
 }
+
+.image-style {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.link-style {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.link-style:hover {
+    text-decoration: underline;
+}
+
 
 h1 {
     text-align: center;
