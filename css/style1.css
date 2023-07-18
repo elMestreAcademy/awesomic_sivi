@@ -22,7 +22,58 @@ body div {
 }
 
 #knowledge {
+    font-family: 'Segoe UI';
+    display: flex;
+    flex-direction: row;
     background-color: rgb(13, 226, 13);
+    /* justify-content: center; */
+
+}
+
+
+#languages {
+    font-family: 'Segoe UI';
+    font-weight: normal;
+    font-size: 20px;
+    /* margin-top: -10px; */
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(183, 255, 115)
+}
+
+#hardSkills {
+    font-family: 'Segoe UI';
+    font-weight: normal;
+    font-size: 20px;
+    /* margin-top: -10px; */
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(183, 255, 115)
+}
+
+#softSkills {
+    font-family: 'Segoe UI';
+    font-weight: normal;
+    font-size: 20px;
+    /* margin-top: -10px; */
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(183, 255, 115)
+}
+
+#studies {
+    font-family: 'Segoe UI';
+    font-weight: normal;
+    font-size: 20px;
+    /* margin-top: -10px; */
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
+    background-color: rgb(183, 255, 115)
 }
 
 #careerPreferences {
