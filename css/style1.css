@@ -6,27 +6,96 @@ body {
 }
 
 body div {
-    margin: 0.6rem;
+    margin: 1rem;
 }
+
+
+
+
+#name {
+    text-align: center;
+    font-size: 32px;
+}
+
+#surnames {
+    text-align: center;
+    font-size: 32px;
+}
+
+
+#title {
+    text-align: center;
+    font-size: 22px;
+}
+
+#relevantYearsOfExperience {
+    font-size: 32px;
+}
+
+#alt {
+    display: none;
+}
+
 
 #settings {
     display: none;
 }
 
 #aboutMe {
-    background-color: rgb(255, 121, 244);
+    background-color: rgb(255, 96, 239);
 }
 
+#profile {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(241, 165, 242);
+    justify-content: center;
+}
+
+#avatar {
+    order: 0;
+}
+
+#avatar>#link {
+    display: flex;
+}
+
+#avatar>#link>img {
+    max-width: 24em;
+    margin: 0 auto;
+}
+
+#name {
+    order: 1;
+}
+
+#surnames {
+    order: 2;
+}
+
+#title {
+    order: 3;
+}
+
+#birthday {
+    order: 4;
+}
+
+#description {
+    order: 5;
+}
+
+
 #experience {
-    background-color: orange;
+    background-color: rgb(251, 156, 23);
 }
 
 #knowledge {
-    background-color: rgb(13, 226, 13);
+    background-color: rgb(169, 255, 65);
 }
 
 #careerPreferences {
-    background-color: yellow;
+    background-color: rgb(249, 225, 36);
 }
 
 #main_wrapper {
