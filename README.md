@@ -29,14 +29,17 @@ Puedes verificar tu dirección de correo electrónico después de registrarte co
 
 ## Es hora de generar tu CV
 
-1. Forkea el repositorio y empieza a modificar el json.Aqui te recomiendo un buen sitio donde puedes seguir los pasos,[medium.com](https://medium.com/@6unpnp/fork-a-github-repository-and-deploy-its-github-pages-site-d55dc53988d)
+1. Forkea el repositorio y empieza a modificar el json. Aqui te recomiendo un buen artículo donde puedes seguir los pasos: [medium.com](https://medium.com/@6unpnp/fork-a-github-repository-and-deploy-its-github-pages-site-d55dc53988d)
+
+Lo más sencillo será que el repositorio se llame <TU_USUARIO>.guthub.io
 
 > **Warning**
-> Si clonas el repo, no podrás publiar en t págin a menos que cambies el remoto y publiques en tu cuenta
+> Si clonas el repo, no podrás publiar en tu página a menos que cambies el remoto y publiques en tu cuenta!
 
 <details>
-    <summary>Pasos para clonar un repo de GidHub</summary>
-1. Para poder generar el CV clona nuestro repositorio en tu cuenta.En la pestaña <> Code abre el desplegable.
+    <summary>Pasos para clonar un repo de GitHub</summary>
+
+1. Para poder generar el CV clona nuestro repositorio en tu cuenta. En la pestaña <> Code abre el desplegable.
 Elige el protocolo SSH y clona en tu sistema para manejo de repositorios, como SourceTree.
 ![github_capture_00](/img/github_capture_00.png)
 2. En el sistema abre la pestaña clone, pega la ruta. Puedes cambiar el nombre y elegir la ruta, recomendación- elige el nombre de la carpeta con el nombre del repositorio y así podrás seguir fácilmente los ficheros.
@@ -44,7 +47,10 @@ Elige el protocolo SSH y clona en tu sistema para manejo de repositorios, como S
 4. Incorpora tus datos y valida el json con [jsonlint.com](https://www.jsonlint.com/).
 El validador te mostrará los posibles errores si aparecen en alguna línea del código, podrás solucionarlo fácilmente, los errores más comunes son esrrores de sangría, matriz no incluida o sin coma.
 5. Una vez validado el json lo podrás visualizar con el GitHub Pages y en el sitio web donde se publicará.
+
 </details>
+
+Y ahora ya solo queda publicarlo para que se vea en tu Github Pages:
 
 ## Publicar en Github Pages
 
@@ -54,7 +60,7 @@ El validador te mostrará los posibles errores si aparecen en alguna línea del 
 2.- Escribe username.github.io --> cambie username por su nombre de usuario de GitHub.
 ![imagen](/img/imagen2.jpg)
 
-3.- EN configuración accede al apartado de Pages.
+3.- En configuración accede al apartado de Pages.
 
 ![imagen](/img/imagen3_1.jpg)
 
