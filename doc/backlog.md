@@ -31,9 +31,9 @@ creame un diagrama de gantt en mermaid con la siguiente lista de tareas. la fech
 
 4. Crear componentes de CV [paolafdezz],[saraArbesu],[amoyanoglz]
     - √ Crear componentes para cada sección del CV (por ejemplo, experiencia laboral, educación, habilidades).
-        - √ aboutMe (profile, relevantYearsOfExperiencie, relevansLinks, significativeRelationships, interestingFacts, recommendations)
+        - √ aboutMe (profile, relevantYearsOfExperiencie, relevansLinks, significativeRelationships, interestingFacts, recommendations) - (Sección rosa [saraArbesu], [javiercjv])  
         - √ experience (jobs, publicArtifacts)
-        - √ knowledge (languages[], hardSkills[], softSkills[], estudies[])
+        - √ knowledge (languages[], hardSkills[], softSkills[], estudies[]) - (Sección verde [paolafdezz], [josedavidd])
         - √ careerPreferences (contact, requirements, preferences, goals[])
         - Html
 
@@ -83,12 +83,11 @@ gantt
         section Crear componentes
         Crear componentes :after a1, 5d
         Parsear JSON :a1, 2023-07-12, 1d
-        HTML desde JSON :after a1, 5d
+        HTML desde JSON :after a1, 6d
 
         section Estilo CSS
-        Colores desarollo :e1, 2023-07-17, 1d
+        Colores desarollo :e1, 2023-07-17, 2d
         Maquetación :e1, 2023-07-17, 2d
-        Responsive :after e1, 1d
         Colores finales :after e1, 1d
 
         section Pruebas
@@ -102,14 +101,12 @@ gantt
         
 
         section SEO y accesibilidad
-        Accesibilidads(A11Y) :h1, 2023-07-20, 1d
-        
-        
-        SEO :after h1, 1d
+        Accesibilidad(A11Y) :h1, 2023-07-20, 1d
+        SEO : i1, 2023-07-20, 1d
 
         section PDF
         Generar :i1, 2023-07-20, 1d
-        Descargar :after i1, 1d
+        Descargar : i1, 2023-07-20, 1d
 
 ```
 
@@ -129,11 +126,10 @@ graph TB
         J[Probar la funcionalidad de la página web]
         K[Probar la responsividad en varios dispositivos]
         L[Configurar GitHub Pages para desplegar la página web]
-
-        N[Mejorar la accesibilidad de la página web - A11Y]
-        O[Optimizar la página web para SEO]
-        P[Generar PDF]
-        Q[Descargar PDF]
+        M[Mejorar la accesibilidad de la página web - A11Y]
+        N[Optimizar la página web para SEO]
+        O[Generar PDF]
+        P[Descargar PDF]
         A-->B
         B-->C
         C-->F
@@ -147,8 +143,8 @@ graph TB
         I-->K
         J-->L
         K-->L
+        L-->M
         L-->N
         L-->O
-        L-->P
-        P-->Q
+        O-->P
 ```
