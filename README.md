@@ -29,7 +29,7 @@ Puedes verificar tu dirección de correo electrónico después de registrarte co
 
 ## Es hora de generar tu CV
 
-Forkea el repositorio y empieza a modificar el json. Aqui te recomiendo un buen artículo donde puedes seguir los pasos: [medium.com](https://medium.com/@6unpnp/fork-a-github-repository-and-deploy-its-github-pages-site-d55dc53988d)
+Forkea el repositorio. Aqui te recomiendo un buen artículo donde puedes seguir los pasos: [medium.com](https://medium.com/@6unpnp/fork-a-github-repository-and-deploy-its-github-pages-site-d55dc53988d)
 
 Lo más sencillo será que el repositorio se llame <TU_USUARIO>.github.io
 
@@ -49,6 +49,8 @@ El validador te mostrará los posibles errores si aparecen en alguna línea del 
 
 > **Warning**
 > Si clonas el repo, no podrás publiar en tu página a menos que cambies el remoto y publiques en tu cuenta!
+
+Por defecto se utiliza el fichero ```/json/default_sample_ES.json```. Modifícalo a voluntad y adaptalo a tus necesidades.
 
 Y ahora ya solo queda publicarlo para que se vea en tu Github Pages.
 
