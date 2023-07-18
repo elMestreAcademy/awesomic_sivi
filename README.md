@@ -29,12 +29,9 @@ Puedes verificar tu dirección de correo electrónico después de registrarte co
 
 ## Es hora de generar tu CV
 
-1. Forkea el repositorio y empieza a modificar el json. Aqui te recomiendo un buen artículo donde puedes seguir los pasos: [medium.com](https://medium.com/@6unpnp/fork-a-github-repository-and-deploy-its-github-pages-site-d55dc53988d)
+Forkea el repositorio y empieza a modificar el json. Aqui te recomiendo un buen artículo donde puedes seguir los pasos: [medium.com](https://medium.com/@6unpnp/fork-a-github-repository-and-deploy-its-github-pages-site-d55dc53988d)
 
-Lo más sencillo será que el repositorio se llame <TU_USUARIO>.guthub.io
-
-> **Warning**
-> Si clonas el repo, no podrás publiar en tu página a menos que cambies el remoto y publiques en tu cuenta!
+Lo más sencillo será que el repositorio se llame <TU_USUARIO>.github.io
 
 <details>
     <summary>Pasos para clonar un repo de GitHub</summary>
@@ -50,9 +47,13 @@ El validador te mostrará los posibles errores si aparecen en alguna línea del 
 
 </details>
 
-Y ahora ya solo queda publicarlo para que se vea en tu Github Pages:
+> **Warning**
+> Si clonas el repo, no podrás publiar en tu página a menos que cambies el remoto y publiques en tu cuenta!
 
-## Publicar en Github Pages
+Y ahora ya solo queda publicarlo para que se vea en tu Github Pages.
+
+<details>
+    <summary>Cómo publicar en Github Pages</summary>
 
 1.- Crear un nuevo repositorio
 ![imagen](/img/imagen1.jpg)
@@ -80,3 +81,5 @@ En el dominio escribe username.github.io --> cambiendo "username" por tu nombre 
 ![imagen](/img/imagen6_1.jpg)
 
 ![imagen](/img/imagen6_2.jpg)
+
+</details>
