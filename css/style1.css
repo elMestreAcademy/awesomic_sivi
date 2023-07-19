@@ -167,6 +167,8 @@ body div {
 }
 
 #studies::before {
+    align-items: center;
+    text-align: center;
     font-size: x-large;
     font-style: oblique;
     font-weight: bold;
