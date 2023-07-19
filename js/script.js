@@ -30,60 +30,60 @@ class SiviGenerator {
         return elem;
     }
 
-    makeElem(key, value) {
-        let container = this.createAndAppendElement("div", { className: key });
+    makeElem(key, value, parent = this.section) {
+        let container = this.createAndAppendElement("div", { className: key }, '', parent);
         this.createAndAppendElement(key, {}, value, container);
     }
 
-    makeImg(key, value) {
-        this.createAndAppendElement("img", { src: value });
+    makeImg(key, value, parent = this.section) {
+        this.createAndAppendElement("img", { src: value }, '', parent);
     }
 
-    makeLink(key, value) {
-        this.createAndAppendElement("a", { href: value }, value);
+    makeLink(key, value, parent = this.section) {
+        this.createAndAppendElement("a", { href: value }, value, parent);
     }
 
-    makeNumber(key, value) {
-        this.createAndAppendElement("div", {}, value);
+    makeNumber(key, value, parent = this.section) {
+        this.createAndAppendElement("div", {}, value, parent);
     }
 
-    makeBool(key, value) {
-        let container = this.createAndAppendElement("div");
+    makeBool(key, value, parent = this.section) {
+        let container = this.createAndAppendElement("div", {}, '', parent);
         let label = this.createAndAppendElement("label", {}, key, container);
         this.createAndAppendElement("input", { type: "checkbox", checked: value }, '', container);
     }
 
-    processSection(key, data, level = 0) {
-        parent = this.createAndAppendElement("div", { id: key });
+    processSection(key, data, level = 0, parent = this.section) {
+        let container = this.createAndAppendElement("div", { className: key }, '', parent);
 
         switch (typeof (data[key])) {
             case 'string':
-                if (key === 'link') this.makeImg(key, data[key]);
-                else if (key === 'URL') this.makeLink(key, data[key]);
-                else this.makeElem('h' + level, data[key]);
+                if (key === 'link') this.makeImg(key, data[key], container);
+                else if (key === 'URL') this.makeLink(key, data[key], container);
+                else this.makeElem('h' + level, data[key], container);
                 break;
             case 'object':
-                this.makeSection(data[key], level + 1);
+                this.makeSection(data[key], level + 1, container);
                 break;
             case 'number':
-                this.makeNumber(key, data[key]);
+                this.makeNumber(key, data[key], container);
                 break;
             case 'boolean':
-                this.makeBool(key, data[key]);
+                this.makeBool(key, data[key], container);
                 break;
             default:
                 console.error(`TYPE NOT MANAGED ${typeof (data[key])}`);
         }
     }
 
-    makeSection(data, level = 0) {
+    makeSection(data, level = 0, parent = this.section) {
         for (const key in data) {
             if (data.hasOwnProperty(key)) {
                 if (level === 0) {
                     this.resetSection();
                 }
                 this.debugLog(typeof (data[key]), data[key]);
-                this.processSection(key, data, level);
+                this.processSection(key, data, level, parent);
             }
         }
     }
