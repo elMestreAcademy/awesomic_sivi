@@ -1,31 +1,37 @@
 body {
-    background-color: #f2f2f2;
+    background-color: #d5d5d5;
 }
 
 .aboutMe {
-    background-color: antiquewhite;
+    background-color: rgba(228, 245, 254, 0.962);
+
 }
 
 .profile {
     background-color: rgb(241, 165, 242);
-    background-color: antiquewhite;
+    background-color: rgb(209, 230, 250);
 
+}
+
+.profile {
+    background-color: rgba(243, 168, 242, 0.399);
 }
 
 .experience {
     background-color: rgb(251, 156, 23);
-    background-color: antiquewhite;
+    background-color: rgba(228, 245, 254, 0.962);
 }
 
 .knowledge {
     background-color: rgb(169, 255, 65);
-    background-color: antiquewhite;
+    background-color: rgba(228, 245, 254, 0.962);
+
 
 }
 
 .languages {
     background-color: rgb(183, 255, 115);
-    background-color: antiquewhite;
+    background-color: rgba(243, 168, 242, 0.399);
 
 }
 
@@ -36,7 +42,7 @@ body {
 
 .hardSkills {
     background-color: rgb(183, 255, 115);
-    background-color: beige;
+    background-color: rgba(243, 168, 242, 0.399);
 
 }
 
@@ -46,7 +52,7 @@ body {
 
 .softSkills {
     background-color: rgb(183, 255, 115);
-    background-color: beige;
+    background-color: rgba(243, 168, 242, 0.399);
 
 }
 
@@ -56,7 +62,7 @@ body {
 
 .studies {
     background-color: rgb(183, 255, 115);
-    background-color: antiquewhite;
+    background-color: rgba(228, 245, 254, 0.962);
 
 }
 
@@ -66,6 +72,7 @@ body {
 
 .careerPreferences {
     background-color: rgb(249, 225, 36);
+    background-color: rgba(228, 245, 254, 0.962);
 }
 
 .main_wrapper {

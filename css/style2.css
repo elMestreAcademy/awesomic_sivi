@@ -7,7 +7,7 @@ h2,
 h3,
 h4,
 p {
-    background-color: rgba(0, 255, 0, 0.2);
+    background-color: rgba(249, 249, 249, 0.2);
 }
 
 h5,
@@ -18,11 +18,11 @@ h8 {
 }
 
 a {
-    background-color: rgba(255, 0, 0, 0.2);
+    background-color: rgb(255, 114, 236);
 }
 
 .aboutMe {
-    background-color: red;
+    background-color: rgb(255, 0, 238);
 }
 
 .profile {
