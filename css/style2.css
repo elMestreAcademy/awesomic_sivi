@@ -9,28 +9,28 @@ body div {
     margin: 0.6rem;
 }
 
-#settings {
+.settings {
     display: none;
 }
 
-#aboutMe {
+.aboutMe {
     background-color: rgb(255, 121, 244);
 }
 
-#experience {
+.experience {
     background-color: orange;
 }
 
-#knowledge {
+.knowledge {
     background-color: rgb(13, 226, 13);
 }
 
-#careerPreferences {
+.careerPreferences {
     background-color: yellow;
 }
 
-#main_wrapper {
-    background-color: #fff;
+.main_wrapper {
+    background-color: .fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -47,7 +47,7 @@ body div {
 }
 
 .link-style {
-    color: #007bff;
+    color: .007bff;
     text-decoration: none;
 }
 
@@ -74,7 +74,7 @@ ul {
 }
 
 .section-header {
-    background-color: #f2f2f2;
+    background-color: .f2f2f2;
     padding: 10px;
 }
 

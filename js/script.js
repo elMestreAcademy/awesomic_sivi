@@ -54,7 +54,7 @@ class SiviGenerator {
     }
 
     processSection(key, data, level = 0, parent = this.section) {
-        let container = this.createAndAppendElement("div", { id: key }, '', parent);
+        let container = this.createAndAppendElement("div", { className: key }, '', parent);
 
         switch (typeof (data[key])) {
             case 'string':
