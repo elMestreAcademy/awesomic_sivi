@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: serif, sans-serif;
     background-color: #f2f2f2;
     margin: 0;
     padding: 20px;
@@ -8,9 +8,6 @@ body {
 body div {
     margin: 1rem;
 }
-
-
-
 
 #name {
     text-align: center;
@@ -43,12 +40,14 @@ body div {
 
 #aboutMe {
     background-color: rgb(255, 96, 239);
+    border-radius: 10px;
 }
 
 #profile {
     display: flex;
     flex-direction: column;
     background-color: rgb(241, 165, 242);
+    border-radius: 10px;
     justify-content: center;
 }
 
@@ -88,6 +87,7 @@ body div {
 
 #experience {
     background-color: rgb(251, 156, 23);
+    border-radius: 10px;
 }
 
 #knowledge {
@@ -179,11 +179,12 @@ body div {
 
 #careerPreferences {
     background-color: rgb(249, 225, 36);
+    border-radius: 10px;
 }
 
 #main_wrapper {
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
