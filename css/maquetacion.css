@@ -1,0 +1,225 @@
+body {
+    font-family: serif, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+body div {
+    margin: 1rem;
+}
+
+.name {
+    text-align: center;
+    font-size: 32px;
+}
+
+.surnames {
+    text-align: center;
+    font-size: 32px;
+}
+
+
+.title {
+    text-align: center;
+    font-size: 22px;
+}
+
+.relevantYearsOfExperience {
+    font-size: 32px;
+}
+
+.alt {
+    display: none;
+}
+
+
+.settings {
+    display: none;
+}
+
+.aboutMe {
+    border-radius: 10px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.avatar {
+    order: 0;
+}
+
+.avatar>.link {
+    display: flex;
+}
+
+.avatar>.link>img {
+    max-width: 24em;
+    margin: 0 auto;
+}
+
+.name {
+    order: 1;
+}
+
+.surnames {
+    order: 2;
+}
+
+.title {
+    order: 3;
+}
+
+.birthday {
+    order: 4;
+}
+
+.description {
+    order: 5;
+}
+
+
+.experience {
+    border-radius: 10px;
+}
+
+.knowledge {
+    font-family: 'Segoe UI';
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.languages {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    align-items: center;
+    text-align: justify;
+    width: calc((100%/3) - 45px);
+}
+
+.languages::before {
+    font-size: x-large;
+    font-style: oblique;
+    font-weight: bold;
+    content: "IDIOMAS";
+}
+
+.hardSkills {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 5px;
+    align-items: center;
+    text-align: justify;
+    width: calc((100%/3) - 45px);
+}
+
+.hardSkills::before {
+    font-size: x-large;
+    font-style: oblique;
+    font-weight: bold;
+    content: "FORTALEZAS";
+}
+
+.softSkills {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 5px;
+    align-items: center;
+    text-align: justify;
+    width: calc((100%/3) - 45px);
+}
+
+.softSkills::before {
+    font-size: x-large;
+    font-style: oblique;
+    font-weight: bold;
+    content: "HABILIDADES";
+}
+
+.studies {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    justify-content: left;
+    width: 100%;
+}
+
+.studies::before {
+    align-items: center;
+    text-align: center;
+    font-size: x-large;
+    font-style: oblique;
+    font-weight: bold;
+    content: "ESTUDIOS";
+}
+
+
+.careerPreferences {
+    border-radius: 10px;
+}
+
+.main_wrapper {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.section-style {
+    margin-bottom: 20px;
+}
+
+.image-style {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.link-style {
+    text-decoration: none;
+}
+
+.link-style:hover {
+    text-decoration: underline;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section-header {
+    padding: 10px;
+}
+
+.section-content {
+    padding: 10px;
+}
+
+.section-content p {
+    margin: 5px 0;
+}
+
+.section-content ul {
+    padding-left: 20px;
+}

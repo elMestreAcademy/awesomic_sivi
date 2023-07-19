@@ -1,91 +1,86 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: red;
-    margin: 0;
-    padding: 20px;
+    background-color: #f2f2f2;
 }
 
-body div {
-    margin: 0.6rem;
+h1,
+h2,
+h3,
+h4,
+p {
+    background-color: rgba(0, 255, 0, 0.2);
 }
 
-.settings {
-    display: none;
+h5,
+h6,
+h7,
+h8 {
+    background-color: pink;
+}
+
+a {
+    background-color: rgba(255, 0, 0, 0.2);
 }
 
 .aboutMe {
-    background-color: rgb(255, 121, 244);
+    background-color: red;
+}
+
+.profile {
+    background-color: rgb(241, 165, 242);
 }
 
 .experience {
-    background-color: orange;
+    background-color: rgb(251, 156, 23);
 }
 
 .knowledge {
-    background-color: rgb(13, 226, 13);
+    background-color: rgb(169, 255, 65);
+}
+
+.languages {
+    background-color: rgb(183, 255, 115);
+}
+
+.languages::before {
+    color: rgb(113, 11, 238);
+}
+
+.hardSkills {
+    background-color: rgb(183, 255, 115);
+}
+
+.hardSkills::before {
+    color: rgb(113, 11, 238);
+}
+
+.softSkills {
+    background-color: rgb(183, 255, 115);
+}
+
+.softSkills::before {
+    color: rgb(113, 11, 238);
+}
+
+.studies {
+    background-color: rgb(183, 255, 115);
+}
+
+.studies::before {
+    color: rgb(113, 11, 238);
 }
 
 .careerPreferences {
-    background-color: yellow;
+    background-color: rgb(249, 225, 36);
 }
 
 .main_wrapper {
-    background-color: .fff;
-    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-.section-style {
-    margin-bottom: 20px;
-}
-
-.image-style {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
 }
 
 .link-style {
-    color: .007bff;
-    text-decoration: none;
-}
-
-.link-style:hover {
-    text-decoration: underline;
-}
-
-
-h1 {
-    text-align: center;
-}
-
-h2 {
-    margin-top: 30px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.section {
-    margin-bottom: 40px;
+    color: #007bff;
 }
 
 .section-header {
-    background-color: .f2f2f2;
-    padding: 10px;
-}
-
-.section-content {
-    padding: 10px;
-}
-
-.section-content p {
-    margin: 5px 0;
-}
-
-.section-content ul {
-    padding-left: 20px;
+    background-color: #f2f2f2;
 }
