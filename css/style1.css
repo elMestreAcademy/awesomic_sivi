@@ -92,7 +92,90 @@ body div {
 
 #knowledge {
     background-color: rgb(169, 255, 65);
+    font-family: 'Segoe UI';
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border-radius: 10px;
+    /* margin: 0; */
+    padding: 20px;
 }
+
+#languages {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(183, 255, 115);
+    border-radius: 20px;
+    align-items: center;
+    text-align: justify;
+    width: calc((100%/3) - 45px);
+}
+
+#languages::before {
+    font-size: x-large;
+    font-style: oblique;
+    font-weight: bold;
+    color: rgb(113, 11, 238);
+    content: "IDIOMAS";
+}
+
+#hardSkills {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(183, 255, 115);
+    border-radius: 20px;
+    padding: 5px;
+    align-items: center;
+    text-align: justify;
+    width: calc((100%/3) - 45px);
+}
+
+#hardSkills::before {
+    font-size: x-large;
+    font-style: oblique;
+    font-weight: bold;
+    color: rgb(113, 11, 238);
+    content: "FORTALEZAS";
+}
+
+#softSkills {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(183, 255, 115);
+    border-radius: 20px;
+    padding: 5px;
+    align-items: center;
+    text-align: justify;
+    width: calc((100%/3) - 45px);
+}
+
+#softSkills::before {
+    font-size: x-large;
+    font-style: oblique;
+    font-weight: bold;
+    color: rgb(113, 11, 238);
+    content: "HABILIDADES";
+}
+
+#studies {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(183, 255, 115);
+    border-radius: 20px;
+    justify-content: left;
+    width: 100%;
+}
+
+#studies::before {
+    align-items: center;
+    text-align: center;
+    font-size: x-large;
+    font-style: oblique;
+    font-weight: bold;
+    color: rgb(113, 11, 238);
+    content: "ESTUDIOS";
+}
+
 
 #careerPreferences {
     background-color: rgb(249, 225, 36);
