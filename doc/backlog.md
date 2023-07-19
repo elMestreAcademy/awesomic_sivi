@@ -48,7 +48,7 @@ creame un diagrama de gantt en mermaid con la siguiente lista de tareas. la fech
 7. Pruebas
     - Probar la funcionalidad de la página web en varios navegadores.
     - Probar la responsividad en varios dispositivos.
-    - Crear mas ejemplos JSON --> CV [nagelit]
+    - Crear mas ejemplos JSON --> CV [nagelit], [manal127], [mariagomezt]
 
 8. Despliegue
     - Configurar GitHub Pages para desplegar la página web. - [manal127]
@@ -83,21 +83,21 @@ gantt
         section Crear componentes
         Crear componentes :after a1, 5d
         Parsear JSON :a1, 2023-07-12, 1d
-        HTML desde JSON :after a1, 6d
+        HTML desde JSON :after a1, 7d
 
         section Estilo CSS
-        Colores desarollo :e1, 2023-07-17, 2d
-        Maquetación :e1, 2023-07-17, 2d
+        Colores desarollo :e1, 2023-07-17, 3d
+        Maquetación :e1, 2023-07-17, 3d
         Colores finales :after e1, 1d
 
         section Pruebas
-        funcionalidad :f1, 2023-07-19, 1d
-        responsividad PCs :f1, 2023-07-19, 2d
-        responsividad Móvil :f1, 2023-07-19, 2d
+        funcionalidad :f1, 2023-07-20, 1d
+        responsividad PCs :f1, 2023-07-20, 1d
+        responsividad Móvil :f1, 2023-07-20, 1d
         Probar producción :f1, 2023-07-20, 1d
 
         section Despliegue
-        Pages: desplegar :g1, 2023-07-19, 1d
+        Pages: desplegar :g1, 2023-07-20, 1d
         
 
         section SEO y accesibilidad
