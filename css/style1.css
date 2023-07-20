@@ -1,244 +1,88 @@
 body {
-    font-family: serif, sans-serif;
-    background-color: .f2f2f2;
-    margin: 0;
-    padding: 20px;
-}
-
-body div {
-    margin: 1rem;
-}
-
-.name {
-    text-align: center;
-    font-size: 32px;
-}
-
-.surnames {
-    text-align: center;
-    font-size: 32px;
-}
-
-
-.title {
-    text-align: center;
-    font-size: 22px;
-}
-
-.relevantYearsOfExperience {
-    font-size: 32px;
-}
-
-.alt {
-    display: none;
-}
-
-
-.settings {
-    display: none;
+    background-color: #d5d5d5;
 }
 
 .aboutMe {
-    background-color: rgb(255, 96, 239);
-    border-radius: 10px;
+    background-color: rgba(228, 245, 254, 0.962);
+
 }
 
 .profile {
-    display: flex;
-    flex-direction: column;
     background-color: rgb(241, 165, 242);
-    border-radius: 10px;
-    justify-content: center;
+    background-color: rgb(209, 230, 250);
+
 }
 
-.avatar {
-    order: 0;
+.profile {
+    background-color: rgba(243, 168, 242, 0.399);
 }
-
-.avatar>.link {
-    display: flex;
-}
-
-.avatar>.link>img {
-    max-width: 24em;
-    margin: 0 auto;
-}
-
-.name {
-    order: 1;
-}
-
-.surnames {
-    order: 2;
-}
-
-.title {
-    order: 3;
-}
-
-.birthday {
-    order: 4;
-}
-
-.description {
-    order: 5;
-}
-
 
 .experience {
     background-color: rgb(251, 156, 23);
-    border-radius: 10px;
+    background-color: rgba(228, 245, 254, 0.962);
 }
 
 .knowledge {
     background-color: rgb(169, 255, 65);
-    font-family: 'Segoe UI';
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    border-radius: 10px;
-    /* margin: 0; */
-    padding: 20px;
+    background-color: rgba(228, 245, 254, 0.962);
+
+
 }
 
 .languages {
-    display: flex;
-    flex-direction: column;
     background-color: rgb(183, 255, 115);
-    border-radius: 20px;
-    align-items: center;
-    text-align: justify;
-    width: calc((100%/3) - 45px);
+    background-color: rgba(243, 168, 242, 0.399);
+
 }
 
 .languages::before {
-    font-size: x-large;
-    font-style: oblique;
-    font-weight: bold;
     color: rgb(113, 11, 238);
-    content: "IDIOMAS";
+
 }
 
 .hardSkills {
-    display: flex;
-    flex-direction: column;
     background-color: rgb(183, 255, 115);
-    border-radius: 20px;
-    padding: 5px;
-    align-items: center;
-    text-align: justify;
-    width: calc((100%/3) - 45px);
+    background-color: rgba(243, 168, 242, 0.399);
+
 }
 
 .hardSkills::before {
-    font-size: x-large;
-    font-style: oblique;
-    font-weight: bold;
     color: rgb(113, 11, 238);
-    content: "FORTALEZAS";
 }
 
 .softSkills {
-    display: flex;
-    flex-direction: column;
     background-color: rgb(183, 255, 115);
-    border-radius: 20px;
-    padding: 5px;
-    align-items: center;
-    text-align: justify;
-    width: calc((100%/3) - 45px);
+    background-color: rgba(243, 168, 242, 0.399);
+
 }
 
 .softSkills::before {
-    font-size: x-large;
-    font-style: oblique;
-    font-weight: bold;
     color: rgb(113, 11, 238);
-    content: "HABILIDADES";
 }
 
 .studies {
-    display: flex;
-    flex-direction: column;
     background-color: rgb(183, 255, 115);
-    border-radius: 20px;
-    justify-content: left;
-    width: 100%;
+    background-color: rgba(228, 245, 254, 0.962);
+
 }
 
 .studies::before {
-    align-items: center;
-    text-align: center;
-    font-size: x-large;
-    font-style: oblique;
-    font-weight: bold;
     color: rgb(113, 11, 238);
-    content: "ESTUDIOS";
 }
-
 
 .careerPreferences {
     background-color: rgb(249, 225, 36);
-    border-radius: 10px;
+    background-color: rgba(228, 245, 254, 0.962);
 }
 
 .main_wrapper {
-    background-color: .fff;
-    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-.section-style {
-    margin-bottom: 20px;
-}
-
-.image-style {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
 }
 
 .link-style {
-    color: .007bff;
-    text-decoration: none;
-}
-
-.link-style:hover {
-    text-decoration: underline;
-}
-
-
-h1 {
-    text-align: center;
-}
-
-h2 {
-    margin-top: 30px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.section {
-    margin-bottom: 40px;
+    color: #007bff;
 }
 
 .section-header {
-    background-color: .f2f2f2;
-    padding: 10px;
-}
-
-.section-content {
-    padding: 10px;
-}
-
-.section-content p {
-    margin: 5px 0;
-}
-
-.section-content ul {
-    padding-left: 20px;
+    background-color: #f2f2f2;
 }
