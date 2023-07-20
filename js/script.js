@@ -3,8 +3,16 @@ const DEBUG = false;
 class SiviGenerator {
     constructor(sivi_data) {
         this.sivi_data = sivi_data;
+        this.setTitle();
         this.resetSection();
         this.fillData();
+    }
+
+    setTitle() {
+        let fullName = this.sivi_data["aboutMe"]["profile"]["name"];
+        fullName += " " + this.sivi_data["aboutMe"]["profile"]["surnames"];
+        let title = fullName + " - Sivi";
+        document.title = title;
     }
 
     resetSection() {
