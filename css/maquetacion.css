@@ -1,35 +1,10 @@
-body {
-    font-family: serif, sans-serif;
-    margin: 0;
-    padding: 20px;
-}
-
 body div {
-    margin: 1rem;
+    margin: 0;
 }
 
-.name {
-    text-align: center;
-    font-size: 32px;
-}
-
-.surnames {
-    text-align: center;
-    font-size: 32px;
-}
-
-
-.title {
-    text-align: center;
-    font-size: 22px;
-}
-
-.relevantYearsOfExperience {
-    font-size: 32px;
-}
-
-.alt {
-    display: none;
+div {
+	border: solid 1px rgba(0,0,0,0.1);
+	border-radius: 0.5rem;
 }
 
 
@@ -37,14 +12,9 @@ body div {
     display: none;
 }
 
-.aboutMe {
-    border-radius: 10px;
-}
-
 .profile {
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
     justify-content: center;
 }
 
@@ -54,11 +24,6 @@ body div {
 
 .avatar>.link {
     display: flex;
-}
-
-.avatar>.link>img {
-    max-width: 24em;
-    margin: 0 auto;
 }
 
 .name {
@@ -82,57 +47,37 @@ body div {
 }
 
 
-.experience {
-    border-radius: 10px;
-}
-
 .knowledge {
-    font-family: 'Segoe UI';
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    border-radius: 10px;
-    padding: 20px;
 }
 
 .languages {
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
-    align-items: center;
-    text-align: justify;
     width: calc((100%/3) - 45px);
 }
 
 .languages::before {
-    font-size: x-large;
-    font-style: oblique;
-    font-weight: bold;
     content: "IDIOMAS";
 }
 
 .hardSkills {
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
-    padding: 5px;
     align-items: center;
     text-align: justify;
     width: calc((100%/3) - 45px);
 }
 
 .hardSkills::before {
-    font-size: x-large;
-    font-style: oblique;
-    font-weight: bold;
     content: "FORTALEZAS";
 }
 
 .softSkills {
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
-    padding: 5px;
     align-items: center;
     text-align: justify;
     width: calc((100%/3) - 45px);
@@ -182,26 +127,8 @@ body div {
     margin-bottom: 10px;
 }
 
-.link-style {
-    text-decoration: none;
-}
-
 .link-style:hover {
     text-decoration: underline;
-}
-
-
-h1 {
-    text-align: center;
-}
-
-h2 {
-    margin-top: 30px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
 }
 
 .section {
